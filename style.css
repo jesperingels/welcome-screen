@@ -1,0 +1,86 @@
+@font-face {
+    font-family: Futura-Book;
+    src: url(fonts/FuturaStd-Book.otf);
+}
+@font-face {
+    font-family: Futura-Bold;
+    src: url(fonts/FuturaStd-Bold.otf);
+}
+html, body{
+    min-height: 100%;
+    height: 100%;
+    margin: 0;
+    color: white;
+    font-family: Futura-Book, serif;
+}
+
+
+main{
+    background: linear-gradient(to right, #4AA0AE,#003850 );
+    height: 100%;
+    overflow: hidden;
+    text-transform: uppercase;
+}
+    h1{
+        font-family: Futura-Bold, serif;
+        position: absolute;
+        left:7%;
+        top:3%;
+        font-size: 85px;
+    }
+    #name{
+        left: 30%;
+    }
+    #name::after{
+        content: "!";
+    }
+    aside{
+        height:150%;
+        width:300px;
+        background-color:#061926;
+        position: fixed;
+        right:-37px;
+        top:-100px;
+        overflow: hidden;
+        transform: rotate(5deg);
+        border: 6px solid;
+        border-image: linear-gradient(to top, #4AA2AD,#023951) 1 100%;
+    }
+
+    .logo{
+        position: absolute;
+        bottom: 8%;
+        right: 2%;
+    }
+
+    .text-wrapper{
+        position: absolute;
+        right: 31%;
+        bottom: 34%;
+    }
+        h3{
+            font-size: 43px;
+            margin: 0;
+        }
+        ul{
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            font-size: 24px;
+        }
+        ul::before{
+            content:"van";
+            padding:0 4px;
+        }
+        .until::before {
+            content: "tot";
+            padding: 0 4px;
+        }
+    .arrow{
+        position: absolute;
+        top: 43%;
+        right: 58%;
+        transform: scaleX(-1);
+        width: 20%;
+        height: 30%;
+    }
