@@ -4,5 +4,5 @@ $db = new PDO('mysql:host=localhost;dbname=yad;charset=utf8','root');
 
 }
 catch(PDOException $e) {
-echo $e->getMessage();
+echo "Connection failed:" . $e->getMessage();
 }

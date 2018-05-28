@@ -1,11 +1,20 @@
 <?php
+
+
+$naam = $_POST['naam'];
+$tijdstip_van = $_POST['tijdstip_van'];
+$tijdstip_tot = $_POST['tijdstip_tot'];
+
+if (!empty($naam) || !empty($tijdstip_van) || !empty($tijdstip_tot)){
 // voeg het bestand in dat de connectie maakt met de database
-include 'conn.php';
+    include 'conn.php';
 // bereid het SQL statement voor
-$sql = ' SELECT';
-
+$sql = ' INSERT Into yad (naam, tijdstip_van, tijdstip_tot) values(?,?,?)';
 $query = $db->prepare($sql);
-
+} else{
+    echo 'Vul alle velden in';
+    die();
+}
 
 
 // voer je statement uit

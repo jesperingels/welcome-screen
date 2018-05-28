@@ -9,7 +9,7 @@
 
     <main>
 
-        <form>
+        <form action="index.php" method="post">
 
             <table>
                 <tr>
@@ -17,7 +17,7 @@
                         <h4>Klantnaam:</h4>
                     </td>
                     <td>
-                        <input type="text" name="name"/>
+                        <input type="text" name="naam" required/>
                     </td>
                 </tr>
 
@@ -26,7 +26,7 @@
                         <h4>Tijdstip van:</h4>
                     </td>
                     <td>
-                        <input type="text" name="name"/>
+                        <input type="text" name="tijdstip_van" required/>
                     </td>
                 </tr>
 
@@ -35,7 +35,7 @@
                         <h4>Tijdstip tot:</h4>
                     </td>
                     <td>
-                        <input type="text" name="name"/>
+                        <input type="text" name="tijdstip_tot" required/>
                     </td>
                 </tr>
                 <tr>
