@@ -2,11 +2,11 @@
  * Created by jesperingels on 16-05-18.
  */
 
-let inputValue = document.getElementById("userInput").value;
+let inputValue = 'hans';
 
 function name (klant){
 
-    document.getElementById("name").textContent = klant;
+    document.getElementById("name").innerText = klant;
 
 }
 

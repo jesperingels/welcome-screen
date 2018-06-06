@@ -9,7 +9,7 @@
 
     <main>
 
-        <form action="index.php" method="post">
+        <form action="includes/submit.php" method="POST">
 
             <table>
                 <tr>
@@ -40,7 +40,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <input type="submit" name="submit" value="submit"/>
+                        <button type="submit" name="submit">Submit</button>
                     </td>
                 </tr>
 
