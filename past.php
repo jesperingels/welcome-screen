@@ -27,9 +27,9 @@
 // toon het json object
 //echo $json;
 
-/*
+
     include_once 'includes/conn.php';
 
     $sql = "SELECT * FROM scherm;";
-    $result = mysqli_query($conn, $sql); /*
+    $result = mysqli_query($conn, $sql);
 
