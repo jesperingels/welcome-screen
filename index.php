@@ -21,7 +21,7 @@
                     $currentTime = date("H:i");
 
                     //Select data from database
-                    $sql = "SELECT  naam, datum, tijdstip_van, tijdstip_tot FROM scherm WHERE id = 1;";
+                    $sql = "SELECT  naam, tijdstip_van, tijdstip_tot FROM scherm WHERE id = 4;";
                     //Send the sql to the database
                     $result = mysqli_query($conn, $sql);
                     //Fetch the data from the database
