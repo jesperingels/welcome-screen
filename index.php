@@ -15,7 +15,7 @@
         <h1>Welkom
             <span>
                 <?php
-                    $sql = "SELECT  naam, tijdstip_van, tijdstip_tot FROM scherm WHERE id = 2;";
+                    $sql = "SELECT  naam, tijdstip_van, tijdstip_tot FROM scherm WHERE id = 4;";
                     $result = mysqli_query($conn, $sql);
                     $person = mysqli_fetch_assoc($result);
                     echo $person['naam'];
