@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>You Are Digital</title>
+    <title>Screen</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <?php include_once 'includes/conn.php'; ?>
 </head> <!-- head end -->
@@ -15,10 +15,23 @@
         <h1>Welkom
             <span>
                 <?php
-                    $sql = "SELECT  naam, tijdstip_van, tijdstip_tot FROM scherm WHERE id = 2;";
+                    //Store current date in Variable
+                    $currentDate = date("Y/m/d");
+                    //Store current Time in Variable
+                    $currentTime = date("H:i");
+
+                    //Select data from database
+                    $sql = "SELECT  naam, datum, tijdstip_van, tijdstip_tot FROM scherm WHERE id = 1;";
+                    //Send the sql to the database
                     $result = mysqli_query($conn, $sql);
+                    //Fetch the data from the database
                     $person = mysqli_fetch_assoc($result);
-                    echo $person['naam'];
+
+                    //Show data from column 'naam'
+                    echo $person['naam']. "<br>";
+
+                    //Test currentDate and currentTime
+                    echo $currentDate."|".$currentTime;
                 ?>
             </span>
         </h1>
@@ -39,3 +52,4 @@
     <script src="script.js"></script>
 </body> <!-- body end -->
 </html>
+

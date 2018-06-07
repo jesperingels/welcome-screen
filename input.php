@@ -14,7 +14,7 @@
             <table>
                 <tr>
                     <td>
-                        <h4>Klantnaam:</h4>
+                        <h4>klantnaam:</h4>
                     </td>
                     <td>
                         <input type="text" name="naam" required/>
@@ -22,25 +22,33 @@
                 </tr>
 
                 <tr>
+                    <td><h4>datum:</h4></td>
                     <td>
-                        <h4>Tijdstip van:</h4>
-                    </td>
-                    <td>
-                        <input type="text" name="tijdstip_van" required/>
+                        <input type="text" name="datum">
                     </td>
                 </tr>
 
                 <tr>
                     <td>
-                        <h4>Tijdstip tot:</h4>
+                        <h4>tijdstip van:</h4>
                     </td>
                     <td>
-                        <input type="text" name="tijdstip_tot" required/>
+                        <input type="text" name="tijdstip_van" placeholder="00:00" required/>
                     </td>
                 </tr>
+
                 <tr>
                     <td>
-                        <button type="submit" name="submit">Submit</button>
+                        <h4>tijdstip tot:</h4>
+                    </td>
+                    <td>
+                        <input type="text" name="tijdstip_tot" placeholder="00:00" required/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <button type="submit" name="submit">Verstuur</button>
                     </td>
                 </tr>
 
