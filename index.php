@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Screen</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    //Include connection to the database
+    <!--Include connection to the database-->
     <?php include_once 'includes/conn.php'; ?>
 </head> <!-- head end -->
 
