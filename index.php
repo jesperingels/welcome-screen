@@ -25,7 +25,7 @@
 
 
                     //$sql = sprintf("SELECT * FROM `scherm` WHERE '%s' >= `tijdstip_van` and '%s' <= `tijdstip_tot` limit 1", $currentTime, $currentTime);
-                    $sql ="SELECT * FROM `scherm` WHERE '$currentTime' >= `tijdstip_van` and '$currentTime' <= `tijdstip_tot` limit 1;";
+                    $sql ="SELECT * FROM `scherm` WHERE '$currentTime' >= `tijdstip_van` and '$currentTime' <= `tijdstip_tot` and `datum` = '$currentDate' limit 1;";
 
 
                     //Send the sql to the database
@@ -35,10 +35,11 @@
 
 
                     if (!empty($package)) {
-
                         echo $package['naam'];
+
                     } else {
-                        echo 'Er zijn geen records';
+                        echo '{Klantnaam}' . "<br>";
+                        echo $currentDate;
                     }
 
                     //Show data from column 'naam'
