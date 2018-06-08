@@ -38,7 +38,7 @@
                     //Else show {Klantnaam}
                     } else {
                         echo '{Klantnaam}' . "<br>";
-                        echo $currentDate;
+                        
                     }
 
                 ?>
