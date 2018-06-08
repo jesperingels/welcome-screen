@@ -18,20 +18,37 @@
                     //Store current date in Variable
                     $currentDate = date("Y/m/d");
                     //Store current Time in Variable
-                    $currentTime = date("H:i");
+                    $currentTime = date("H:i:s");
 
                     //Select data from database
-                    $sql = "SELECT  naam, tijdstip_van, tijdstip_tot FROM scherm WHERE id = 4;";
+                    $sql = "SELECT  naam, datum, tijdstip_van, tijdstip_tot FROM scherm WHERE id=5;";
+
+
+                    //$sql = sprintf("SELECT * FROM `scherm` WHERE '%s' >= `tijdstip_van` and '%s' <= `tijdstip_tot` limit 1", $currentTime, $currentTime);
+                    $sql ="SELECT * FROM `scherm` WHERE '$currentTime' >= `tijdstip_van` and '$currentTime' <= `tijdstip_tot` limit 1;";
+
+
                     //Send the sql to the database
                     $result = mysqli_query($conn, $sql);
                     //Fetch the data from the database
-                    $person = mysqli_fetch_assoc($result);
+                    $package = mysqli_fetch_assoc($result);
+
+
+                    if (!empty($package)) {
+
+                        echo $package['naam'];
+                    } else {
+                        echo 'Er zijn geen records';
+                    }
 
                     //Show data from column 'naam'
-                    echo $person['naam']. "<br>";
+//                    if($currentTime > $package['tijdstip_van'] && $currentTime < $package['tijdstip_tot']){
+//                    }
+//                        echo $package['naam']. "<br>";
+                   // echo "Current Time:" . $currentTime . "<br>";
+                   // echo "Database Time:" . $package['tijdstip_van'];
 
-                    //Test currentDate and currentTime
-                    echo $currentDate."|".$currentTime;
+
                 ?>
             </span>
         </h1>
@@ -41,8 +58,8 @@
 
             <h3>vergaderruimte</h3>
             <ul>
-                <li class="from"> <?php echo $person['tijdstip_van']?> </li>
-                <li class="until"> <?php echo $person['tijdstip_tot']?> </li>
+                <li class="from"> <?php echo $package['tijdstip_van']?> </li>
+                <li class="until"> <?php echo $package['tijdstip_tot']?> </li>
             </ul>
 
         </div> <!-- text-wrapper end -->

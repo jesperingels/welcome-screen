@@ -22,9 +22,11 @@
                 </tr>
 
                 <tr>
-                    <td><h4>datum:</h4></td>
                     <td>
-                        <input type="text" name="datum">
+                        <h4>datum:</h4>
+                    </td>
+                    <td>
+                        <input type="text" name="datum" required/>
                     </td>
                 </tr>
 
