@@ -79,7 +79,7 @@ main{
     .arrow{
         position: absolute;
         top: 43%;
-        right: 58%;
+        right: 65%;
         transform: scaleX(-1);
         width: 20%;
         height: 30%;
