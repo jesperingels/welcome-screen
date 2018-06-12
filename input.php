@@ -14,10 +14,19 @@
             <table>
                 <tr>
                     <td>
-                        <h4>klantnaam:</h4>
+                        <h4>Voornaam:</h4>
                     </td>
                     <td>
                         <input type="text" name="naam" required/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <h4>Achternaam:</h4>
+                    </td>
+                    <td>
+                        <input type="text" name="achternaam" required/>
                     </td>
                 </tr>
 

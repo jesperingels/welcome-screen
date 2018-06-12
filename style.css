@@ -14,20 +14,52 @@ html, body{
     font-family: Futura-Book, serif;
 }
 
-
 main{
     background: linear-gradient(to right, #4AA0AE,#003850 );
     height: 100%;
     overflow: hidden;
     text-transform: uppercase;
 }
-    h1{
-        font-family: Futura-Bold, serif;
+    .text-welcome{
+        display: flex;
+        width: 1500px;
+        justify-content: left;
         position: absolute;
-        left:7%;
-        top:3%;
-        font-size: 85px;
+        left: 8%;
+        top: 7%;
     }
+    .text-welcome ul{
+        list-style: none;
+    }
+        .text-welcome li{
+            display: inline-block;
+        }
+            .welcome{
+                font-size: 60px;
+            }
+            .welcome::after{
+                content:"";
+                padding-right: 25px;
+            }
+            .db-name{
+                font-size: 80px;
+                font-family: Futura-Bold, serif;
+            }
+            #db-name-space{
+                margin-left: 15px;
+            }
+
+    .text-company{
+        display: flex;
+        flex-direction: row;
+        height: 300px;
+        width: 1500px;
+        justify-content: left;
+        position: absolute;
+        left: 8%;
+        top: 18%;
+    }
+
     #name{
         left: 30%;
     }
@@ -62,13 +94,13 @@ main{
             font-size: 43px;
             margin: 0;
         }
-        ul{
+        .text-wrapper ul{
             display: flex;
             flex-direction: row;
             list-style: none;
             font-size: 24px;
         }
-        ul::before{
+        .text-wrapper ul::before{
             content:"van";
             padding:0 4px;
         }

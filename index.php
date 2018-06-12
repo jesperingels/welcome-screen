@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="15" >
+    <!--<meta http-equiv="refresh" content="15" >-->
     <title>Screen</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <!--Include connection to the database-->
@@ -13,38 +13,56 @@
 <body>
 
     <main>
+        <div class="text-welcome">
+            <ul>
+                <li class="welcome">welkom</li>
+                <li class="db-name">
+                    <?php
 
-        <h1>Welkom
-            <span>
-                <?php
-
-                    //Store current Date in Variable
-                    $currentDate = date("Y/m/d");
-                    //Store current Time in Variable
-                    $currentTime = date("H:i:s");
-
-
-                    //Set SQL statement
-                    $sql ="SELECT * FROM `scherm` WHERE '$currentTime' >= `tijdstip_van` and '$currentTime' <= `tijdstip_tot` and `datum` = '$currentDate' limit 1;";
+                        //Store current Date in Variable
+                        $currentDate = date("Y/m/d");
+                        //Store current Time in Variable
+                        $currentTime = date("H:i:s");
 
 
-                    //Send the sql statement to the database
-                    $result = mysqli_query($conn, $sql);
-                    //Fetch the data from the database
-                    $package = mysqli_fetch_assoc($result);
+                        //Set SQL statement
+                        $sql ="SELECT * FROM `scherm` WHERE '$currentTime' >= `tijdstip_van` and '$currentTime' <= `tijdstip_tot` and `datum` = '$currentDate' limit 1;";
 
-                    //If $package contains data, show 'naam'
-                    if (!empty($package)) {
-                        echo $package['naam'];
-                    //Else show {Klantnaam}
-                    } else {
-                        echo '{Klantnaam}' . "<br>";
 
-                    }
+                        //Send the sql statement to the database
+                        $result = mysqli_query($conn, $sql);
+                        //Fetch the data from the database
+                        $package = mysqli_fetch_assoc($result);
 
-                ?>
-            </span>
-        </h1>
+                        //If $package contains data, show 'naam'
+                        if (!empty($package)) {
+                            echo $package['naam'];
+                        //Else show {Klantnaam}
+                        } else {
+                            echo '{Klantnaam}' . "<br>";
+                        }
+                    ?>
+                </li>
+                <li class="db-name" id="db-name-space">
+                    <?php
+                         if (!empty($package)) {
+                                echo $package['achternaam'];
+                            //Else show {Klantnaam}
+                            } else {
+                                echo '{achternaam}' . "<br>";
+                            }
+                    ?>
+                </li>
+            </ul>
+        </div> <!-- text-welcome end-->
+
+        <div class="text-company">
+            <ul>
+                <li class="van">van</li>
+                <li></li>
+            </ul>
+        </div>
+
         <aside></aside>
         <img class="logo" src="images/youaredigital.svg"/>
         <div class="text-wrapper">
@@ -59,7 +77,7 @@
         <img class="arrow" src="images/arrow.png"/>
     </main> <!-- main end -->
 
-    <script src="script.js"></script>
+
 </body> <!-- body end -->
 </html>
 
