@@ -75,6 +75,33 @@
             </table> <!--table end-->
 
         </form> <!--form end-->
+        <div class="live-db">
+            <table>
+                <thead>
+                    <tr>
+                        <th width="19%">Voornaam</th>
+                        <th width="19%">Achternaam</th>
+                        <th width="19%">Bedrijfsnaam</th>
+                        <th width="19%">Datum</th>
+                        <th width="19%">Tijdstip_van</th>
+                        <th width="19%">Tijdstip_tot</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php for( $i = 0; $i < count( $results->data ); $i++ ) : ?>
+                    <tr>
+                        <td><?php echo $results->data[$i]['naam']; ?></td>
+                        <td><?php echo $results->data[$i]['Country']; ?></td>
+                        <td><?php echo $results->data[$i]['Continent']; ?></td>
+                        <td><?php echo $results->data[$i]['Region']; ?></td>
+                        <td><?php echo $results->data[$i]['Region']; ?></td>
+                        <td><?php echo $results->data[$i]['Region']; ?></td>
+                        <td><?php echo $results->data[$i]['Region']; ?></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
     </main> <!--main end-->
 
