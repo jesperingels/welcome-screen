@@ -34,7 +34,8 @@ main{
         .text-welcome li{
             display: inline-block;
         }
-            .list-text{
+            .list-text-welcome{
+                padding-right: 40px;
                 font-size: 60px;
             }
             .welcome::after{
@@ -57,10 +58,15 @@ main{
         justify-content: left;
         position: absolute;
         left: 8%;
-        top: 30%;
+        top: 19%;
     }
         .text-company li{
             display: inline-block;
+        }
+        .list-text-company{
+            padding-right: 40px;
+            padding-left: 140px;
+            font-size: 60px;
         }
         .company-text{
             font-size: 80px;
@@ -92,10 +98,20 @@ main{
         right: 2%;
     }
 
+    .text-location{
+        position: absolute;
+        bottom: 39%;
+        right:36%;
+    }
+        .location{
+            font-size: 50px;
+            font-family: Futura-Bold, serif;
+        }
+
     .text-wrapper{
         position: absolute;
-        right: 31%;
-        bottom: 34%;
+        right: 32%;
+        bottom: 22%;
     }
         h3{
             font-size: 43px;
@@ -106,20 +122,25 @@ main{
             flex-direction: row;
             list-style: none;
             font-size: 24px;
+            padding: 0;
         }
-        .text-wrapper ul::before{
+        .from::before{
             content:"van";
             padding:0 4px;
         }
         .until::before {
             content: "tot";
-            padding: 0 4px;
+            padding: 0 0 0 35px;
         }
     .arrow{
         position: absolute;
-        top: 43%;
+        top: 54%;
         right: 65%;
         transform: scaleX(-1);
         width: 20%;
-        height: 30%;
+        height: 20%;
+    }
+    .calender-image{
+        height: 30px;
+        padding-right: 15px;
     }

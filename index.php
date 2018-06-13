@@ -15,7 +15,7 @@
     <main>
         <div class="text-welcome">
             <ul>
-                <li class="list-text">welkom</li>
+                <li class="list-text-welcome">welkom</li>
                 <li class="db-name">
                     <?php
 
@@ -58,17 +58,21 @@
 
         <div class="text-company">
             <ul>
-                <li class="list-text">van</li>
+                <li class="list-text-company">van</li>
                 <li class="company-text"><?php echo $package['bedrijf'] ?></li>
             </ul>
         </div>
 
         <aside></aside>
         <img class="logo" src="images/youaredigital.svg"/>
+        <div class="text-location">
+            <h3>Graag melden bij</h3>
+        </div>
         <div class="text-wrapper">
 
-            <h3>vergaderruimte</h3>
+            <h3 class="location">vergaderruimte</h3>
             <ul>
+                <li><img class="calender-image" src="images/calender-01.png"/></li>
                 <li class="from"> <?php echo $package["TIME_FORMAT(tijdstip_van, '%H:%i')"]?> </li>
                 <li class="until"> <?php echo $package["TIME_FORMAT(tijdstip_tot, '%H:%i')"]?> </li>
             </ul>
