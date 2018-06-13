@@ -32,6 +32,15 @@
 
                 <tr>
                     <td>
+                        <h4>Bedrijfsnaam:</h4>
+                    </td>
+                    <td>
+                        <input type="text" name="bedrijf" required/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
                         <h4>datum:</h4>
                     </td>
                     <td>
@@ -41,7 +50,7 @@
 
                 <tr>
                     <td>
-                        <h4>tijdstip van:</h4>
+                        <h4>Tijdstip van:</h4>
                     </td>
                     <td>
                         <input type="text" name="tijdstip_van" placeholder="00:00" required/>
@@ -50,7 +59,7 @@
 
                 <tr>
                     <td>
-                        <h4>tijdstip tot:</h4>
+                        <h4>Tijdstip tot:</h4>
                     </td>
                     <td>
                         <input type="text" name="tijdstip_tot" placeholder="00:00" required/>

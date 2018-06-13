@@ -15,7 +15,7 @@
     <main>
         <div class="text-welcome">
             <ul>
-                <li class="welcome">welkom</li>
+                <li class="list-text">welkom</li>
                 <li class="db-name">
                     <?php
 
@@ -26,7 +26,7 @@
 
 
                         //Set SQL statement
-                        $sql ="SELECT * FROM `scherm` WHERE '$currentTime' >= `tijdstip_van` and '$currentTime' <= `tijdstip_tot` and `datum` = '$currentDate' limit 1;";
+                        $sql ="SELECT *, TIME_FORMAT(tijdstip_van, '%H:%i'), TIME_FORMAT(tijdstip_tot, '%H:%i') FROM `scherm` WHERE '$currentTime' >= `tijdstip_van` and '$currentTime' <= `tijdstip_tot` and `datum` = '$currentDate' limit 1;";
 
 
                         //Send the sql statement to the database
@@ -58,8 +58,8 @@
 
         <div class="text-company">
             <ul>
-                <li class="van">van</li>
-                <li></li>
+                <li class="list-text">van</li>
+                <li class="company-text"><?php echo $package['bedrijf'] ?></li>
             </ul>
         </div>
 
@@ -69,8 +69,8 @@
 
             <h3>vergaderruimte</h3>
             <ul>
-                <li class="from"> <?php echo $package['tijdstip_van']?> </li>
-                <li class="until"> <?php echo $package['tijdstip_tot']?> </li>
+                <li class="from"> <?php echo $package["TIME_FORMAT(tijdstip_van, '%H:%i')"]?> </li>
+                <li class="until"> <?php echo $package["TIME_FORMAT(tijdstip_tot, '%H:%i')"]?> </li>
             </ul>
 
         </div> <!-- text-wrapper end -->
