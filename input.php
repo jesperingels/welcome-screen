@@ -42,10 +42,22 @@
 
                 <tr>
                     <td>
+                        <h4>Locatie:</h4>
+                    </td>
+                    <td>
+                        <select name="locatie">
+                            <option value="Vergaderruimte">Vergaderruimte</option>
+                            <option value="Main Office">Main Office</option>
+                        <select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
                         <h4>datum:</h4>
                     </td>
                     <td>
-                        <input type="text" name="datum" required/>
+                        <input type="text" name="datum" placeholder="YYYY/MM/DD" required/>
                     </td>
                 </tr>
 
@@ -77,6 +89,31 @@
 
         </form> <!--form end-->
 
+        <div class="live-db">
+            <?php include_once 'includes/conn.php';
+            $get_sql = "SELECT * FROM `scherm`";
+            $get_result = mysqli_query($conn, $get_sql);
+
+            echo "<table>";
+            echo "<tr> <th>naam</th> <th>achternaam</th> <th>bedrijf</th> <th>locatie</th> <th>datum</th> <th>tijdstip_van</th> <th>tijdstip_tot</th> </tr>";
+
+            while($row = mysqli_fetch_assoc($get_result)){
+            ?>
+                <tr>
+                    <td><?php echo $row['naam']; ?></td>
+                    <td><?php echo $row['achternaam']; ?></td>
+                    <td><?php echo $row['bedrijf']; ?> </td>
+                    <td><?php echo $row['locatie']; ?> </td>
+                    <td><?php echo $row['datum']; ?></td>
+                    <td><?php echo $row['tijdstip_van']; ?></td>
+                    <td><?php echo $row['tijdstip_tot']; ?></td>
+                    <td><a href="delete.php?id=<?php echo $row['id']; ?>">Delete</a></td>
+                </tr>
+            <?php
+            }
+            echo "</table>";
+            ?>
+        </div>
 
     </main> <!--main end-->
 

@@ -132,7 +132,15 @@ main{
             content: "tot";
             padding: 0 0 0 35px;
         }
-    .arrow{
+    .arrow-left{
+        position: absolute;
+        top: 54%;
+        right: 65%;
+        transform: scaleX(-1);
+        width: 20%;
+        height: 20%;
+    }
+    .arrow-right{
         position: absolute;
         top: 54%;
         right: 65%;
@@ -148,6 +156,8 @@ main{
 
 /*** input.php ------------------------------------------------------- */
 .live-db{
+    display: flex;
+    justify-content: center;
     color:black;
     position: absolute;
     height: 670px;
@@ -156,5 +166,14 @@ main{
     bottom: 21%;
     right:12%;
 }
+    .live-db table{
+        border: 2px solid red;
+    }
+    .live-db th{
+        border-bottom: 5px solid black;
+    }
+    .live-db td{
+        border-bottom: 2px solid black;
+    }
 
 
