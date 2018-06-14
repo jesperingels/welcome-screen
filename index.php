@@ -1,13 +1,14 @@
+<?php // Include connection to the database ?>
+<?php include_once 'includes/conn.php'; ?>
+
  <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--<meta http-equiv="refresh" content="15" >-->
+    <meta http-equiv="refresh" content="15">
     <title>Screen</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <!--Include connection to the database-->
-    <?php include_once 'includes/conn.php'; ?>
 </head> <!-- head end -->
 
 <body>
@@ -19,14 +20,8 @@
                 <li class="db-name">
                     <?php
 
-                        //Store current Date in Variable
-                        $currentDate = date("Y/m/d");
-                        //Store current Time in Variable
-                        $currentTime = date("H:i:s");
-
-
                         //Set SQL statement
-                        $sql ="SELECT *, TIME_FORMAT(tijdstip_van, '%H:%i'), TIME_FORMAT(tijdstip_tot, '%H:%i') FROM `scherm` WHERE '$currentTime' >= `tijdstip_van` and '$currentTime' <= `tijdstip_tot` and `datum` = '$currentDate' limit 1;";
+                        $sql ="SELECT *, TIME_FORMAT(tijdstip_van, '%H:%i'), TIME_FORMAT(tijdstip_tot, '%H:%i') FROM `scherm` WHERE ADDTIME(CURRENT_TIME(), 001500) >= `tijdstip_van` and ADDTIME(CURRENT_TIME(), 001500) <= `tijdstip_tot` and `datum` = CURRENT_DATE() limit 1;";
 
 
                         //Send the sql statement to the database
@@ -39,7 +34,7 @@
                             echo $package['naam'];
                         //Else show {Klantnaam}
                         } else {
-                            echo '{Klantnaam}' . "<br>";
+                            echo '' . "<br>";
                         }
                     ?>
                 </li>
@@ -49,7 +44,7 @@
                                 echo $package['achternaam'];
                             //Else show {Klantnaam}
                             } else {
-                                echo '{achternaam}' . "<br>";
+                                echo '' . "<br>";
                             }
                     ?>
                 </li>
