@@ -29,6 +29,12 @@
                         //Fetch the data from the database
                         $package = mysqli_fetch_assoc($result);
 
+                       if (!empty($package)){
+
+                        } else {
+                            header("Location: http://localhost:8888/welcome-screen/random.php");
+                        }
+
                         //If $package contains data, show 'naam'
                         if (!empty($package)) {
                             echo $package['naam'];

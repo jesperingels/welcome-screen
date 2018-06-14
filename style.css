@@ -165,6 +165,7 @@ main{
     background-color: white;
     bottom: 21%;
     right:12%;
+    overflow: scroll;
 }
     .live-db table{
         border: 2px solid red;
