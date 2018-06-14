@@ -12,7 +12,7 @@ echo "Connection failed:" . $e->getMessage();
 
 $dbServername = "localhost";
 $dbUsername = "root";
-$dbPassword = "";
+$dbPassword = "root";
 $dbName = "yad";
 
 $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);

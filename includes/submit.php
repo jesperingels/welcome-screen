@@ -2,8 +2,6 @@
 
 include_once 'conn.php';
 
-
-
     $name = $_POST['naam'];
     $last_name = $_POST['achternaam'];
     $company = $_POST['bedrijf'];
@@ -13,7 +11,7 @@ include_once 'conn.php';
 
     $sql = "INSERT INTO scherm (naam, achternaam, bedrijf, datum, tijdstip_van, tijdstip_tot) VALUES ('$name','$last_name','$company','$date','$time_start','$time_end');";
 
-    $result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
+    $result = mysqli_query($conn, $sql);
 
     if ($_server['REQUEST_METHOD'] == 'POST'){
         echo "Submitted!";
