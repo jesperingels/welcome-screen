@@ -25,22 +25,10 @@
 
                 <div class="input-wrapper">
                     <div>
-                        Bedrijfsnaam:
+                        Bedrijf:
                     </div>
                     <div>
                         <input type="text" name="bedrijf" required/>
-                    </div>
-                </div> <!-- input-wrapper end -->
-
-                <div class="input-wrapper">
-                    <div>
-                        Locatie:
-                    </div>
-                    <div>
-                        <select name="locatie">
-                            <option value="Vergaderruimte">Vergaderruimte</option>
-                            <option value="Main Office">Main Office</option>
-                        <select>
                     </div>
                 </div> <!-- input-wrapper end -->
 
@@ -91,7 +79,6 @@
                 <div class="db-row d-flex flex-grow">
                     <div class="db-header">naam</div>
                     <div class="db-header">bedrijf</div>
-                    <div class="db-header">locatie</div>
                     <div class="db-header">datum</div>
                     <div class="db-header">tijdstip_van</div>
                     <div class="db-header">tijdstip_tot</div>
@@ -103,7 +90,6 @@
                     <div class="db-row d-flex db-data">
                         <div class="db-col"><?php echo $row['naam']; ?></div>
                         <div class="db-col"><?php echo $row['bedrijf']; ?> </div>
-                        <div class="db-col"><?php echo $row['locatie']; ?> </div>
                         <div class="db-col"><?php echo $row['datum']; ?></div>
                         <div class="db-col"><?php echo $row['tijdstip_van']; ?></div>
                         <div class="db-col"><?php echo $row['tijdstip_tot']; ?></div>

@@ -15,10 +15,13 @@
 <body>
 
     <main>
-        <div class="text-welcome">
-            <ul>
-                <li class="list-text-welcome">welkom</li>
-                <li class="db-name">
+
+        <div class="text-wrapper">
+
+            <div class="text-welcome-wrapper">
+
+                <div class="text-welcome">welkom</div>
+                <div class="db-name">
                     <?php
 
                         //Set SQL statement
@@ -44,50 +47,43 @@
                             echo '' . "<br>";
                         }
                     ?>
-                </li>
-                <li class="db-name" id="db-name-space">
-                </li>
-            </ul>
-        </div> <!-- text-welcome end-->
+                </div>
 
-        <div class="text-company">
-            <ul>
-                <li class="list-text-company">van</li>
-                <li class="company-text"><?php echo $package['bedrijf'] ?></li>
-            </ul>
-        </div>
+            </div>
+
+            <div class="text-company-wrapper">
+
+                <div class="text-company">van</div>
+                <div class="db-name">
+                    <?php echo $package['bedrijf'] ?>
+                </div>
+
+            </div> <!-- text-company-wrapper end -->
+
+        </div> <!-- text-wrapper end-->
+
+
 
         <aside></aside>
-        <img class="logo" src="images/youaredigital.svg"/>
-        <div class="text-location">
-            <h3>Graag melden bij</h3>
-        </div>
-        <div class="text-wrapper">
 
-            <h3 class="location"><?php echo $package['locatie'] ?></h3>
-            <ul>
-                <li><img class="calender-image" src="images/calender-01.png"/></li>
-                <li class="from"> <?php echo $package["TIME_FORMAT(tijdstip_van, '%H:%i')"]?> </li>
-                <li class="until"> <?php echo $package["TIME_FORMAT(tijdstip_tot, '%H:%i')"]?> </li>
-            </ul>
+        <img class="logo" src="images/youaredigital.svg"/>
+
+        <div class="text-general">
+            Loop gerust binnen
+        </div>
+
+        <div class="text-location-wrapper">
+
+            <div class="location"> Main Office <?php /*echo $package['locatie'] */?></div>
+            <div class="time">
+                <div><img class="calender-image" src="images/calender-01.png"/></div>
+                <div class="from"> <?php echo $package["TIME_FORMAT(tijdstip_van, '%H:%i')"]?> </div>
+                <div class="until"> <?php echo $package["TIME_FORMAT(tijdstip_tot, '%H:%i')"]?> </div>
+            </div>
 
         </div> <!-- text-wrapper end -->
-        <?php
-            if($package['locatie'] == "Vergaderruimte"){
-                echo "<img class='arrow-left' src='images/arrow.png' style='position: absolute;
-                                                                                    top: 54%;
-                                                                                    right: 65%;
-                                                                                    width: 20%;
-                                                                                    height: 20%;'/>";
-            } elseif($package['locatie'] == "Main Office"){
-                echo "<img class='arrow-right' src='images/arrow.png' style='position: absolute;
-                                                                                      top: 76%;
-                                                                                      right: 30%;
-                                                                                      transform: rotate(0deg);
-                                                                                      width: 20%;
-                                                                                      height: 20%;'/>";
-            }
-        ?>
+        <img class="arrow-right" src="images/bolletjes.svg">
+
 
     </main> <!-- main end -->
 
