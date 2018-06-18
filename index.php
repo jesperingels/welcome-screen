@@ -6,28 +6,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="15">
+
+    <!--<meta http-equiv="refresh" content="15">-->
     <title>Screen</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head> <!-- head end -->
 
 <body>
 
     <main>
-        <div class="text-welcome">
-            <ul>
-                <li class="list-text-welcome">welkom</li>
-                <li class="db-name">
+
+        <div class="text-wrapper">
+
+            <div class="text-welcome-wrapper">
+
+                <div class="text-welcome">welkom</div>
+                <div class="db-name">
                     <?php
 
                         //Set SQL statement
-                        $sql ="SELECT *, TIME_FORMAT(tijdstip_van, '%H:%i'), TIME_FORMAT(tijdstip_tot, '%H:%i') FROM `scherm` WHERE ADDTIME(CURRENT_TIME(), 001500) >= `tijdstip_van` and ADDTIME(CURRENT_TIME(), 001500) <= `tijdstip_tot` and `datum` = CURRENT_DATE() limit 1;";
-
+                        $sql ="SELECT *, TIME_FORMAT(tijdstip_van, '%H:%i'), TIME_FORMAT(tijdstip_tot, '%H:%i') FROM `scherm` WHERE ADDTIME(CURRENT_TIME(), 001500) >= `tijdstip_van` and ADDTIME(CURRENT_TIME(), 001000) <= `tijdstip_tot` and `datum` = CURRENT_DATE() limit 1;";
 
                         //Send the sql statement to the database
                         $result = mysqli_query($conn, $sql);
                         //Fetch the data from the database
                         $package = mysqli_fetch_assoc($result);
+
+
+                       if (!empty($package)){
+
+                        } else {
+                            header("Location: http://localhost:8888/welcome-screen/random.php");
+                        }
+
 
                         //If $package contains data, show 'naam'
                         if (!empty($package)) {
@@ -37,45 +49,44 @@
                             echo '' . "<br>";
                         }
                     ?>
-                </li>
-                <li class="db-name" id="db-name-space">
-                    <?php
-                         if (!empty($package)) {
-                                echo $package['achternaam'];
-                            //Else show {Klantnaam}
-                            } else {
-                                echo '' . "<br>";
-                            }
-                    ?>
-                </li>
-            </ul>
-        </div> <!-- text-welcome end-->
+                </div>
 
-        <div class="text-company">
-            <ul>
-                <li class="list-text-company">van</li>
-                <li class="company-text"><?php echo $package['bedrijf'] ?></li>
-            </ul>
-        </div>
+            </div>
+
+            <div class="text-company-wrapper">
+
+                <div class="text-company">van</div>
+                <div class="db-name">
+                    <?php echo $package['bedrijf'] ?>
+                </div>
+
+            </div> <!-- text-company-wrapper end -->
+
+        </div> <!-- text-wrapper end-->
+
+
 
         <aside></aside>
-        <img class="logo" src="images/youaredigital.svg"/>
-        <div class="text-location">
-            <h3>Graag melden bij</h3>
-        </div>
-        <div class="text-wrapper">
 
-            <h3 class="location">vergaderruimte</h3>
-            <ul>
-                <li><img class="calender-image" src="images/calender-01.png"/></li>
-                <li class="from"> <?php echo $package["TIME_FORMAT(tijdstip_van, '%H:%i')"]?> </li>
-                <li class="until"> <?php echo $package["TIME_FORMAT(tijdstip_tot, '%H:%i')"]?> </li>
-            </ul>
+        <img class="logo" src="images/youaredigital.svg"/>
+
+        <div class="text-general">
+            Loop gerust binnen
+        </div>
+
+        <div class="text-location-wrapper">
+
+            <div class="location"> Main Office <?php /*echo $package['locatie'] */?></div>
+            <div class="time">
+                <div><img class="calender-image" src="images/calender-01.png"/></div>
+                <div class="from"> <?php echo $package["TIME_FORMAT(tijdstip_van, '%H:%i')"]?> </div>
+                <div class="until"> <?php echo $package["TIME_FORMAT(tijdstip_tot, '%H:%i')"]?> </div>
+            </div>
 
         </div> <!-- text-wrapper end -->
-        <img class="arrow" src="images/arrow.png"/>
-    </main> <!-- main end -->
+        <img class="arrow-right" src="images/bolletjes.svg">
 
+    </main> <!-- main end -->
 
 </body> <!-- body end -->
 </html>
