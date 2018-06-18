@@ -30,18 +30,15 @@ main{
         display: inline-block;
         width: 1500px;
         position: absolute;
-        left: 8%;
+        left:23%;
         top: 22%;
     }
-        .text-welcome-wrapper{
-            display: flex;
-            flex-direction: row;
-        }
 
         .text-welcome{
             padding-right: 27px;
-            font-size: 60px;
+            font-size: 25px;
             padding-top: 21px;
+            margin-bottom: -15px;
         }
 
         .text-welcome::after{
@@ -55,14 +52,12 @@ main{
     }
 
     .text-company-wrapper{
-        display: flex;
-        flex-direction: row;
+        margin-top: -15px;
     }
-
         .text-company{
-            padding: 21px 27px 0 140px;
-            font-size: 60px;
-
+            padding: 21px 27px 0 0;
+            font-size: 25px;
+            margin-bottom: -15px;
         }
 
     aside{
@@ -86,8 +81,8 @@ main{
 
     .text-general{
         position: absolute;
-        bottom: 40%;
-        right:53%;
+        bottom: 34%;
+        right: 53%;
         font-size: 43px;
     }
 
@@ -99,7 +94,7 @@ main{
     .text-location-wrapper{
         position: absolute;
         right: 59%;
-        bottom: 28%;
+        bottom: 22%;
     }
 
         .time{
@@ -121,7 +116,7 @@ main{
 
     .arrow-right{
         position: absolute;
-        top: 63%;
+        top: 69%;
         right: 55%;
         height: 4%;
     }
@@ -131,6 +126,14 @@ main{
         padding-right: 15px;
     }
 
+    .text-delete{
+        padding-top: 25px;
+        font-size: 24px;
+    }
+
+    .button-back{
+        font-size: 24px;
+    }
 
 /*** input.php ------------------------------------------------------- */
 
@@ -165,7 +168,7 @@ main{
     width: auto;
     background-color: transparent;
     overflow: scroll;
-    min-width: 650px;
+    min-width: 581px;
 }
 
 .db-container{
@@ -175,7 +178,7 @@ main{
     border: 1px solid #666666;
     border-spacing: 5px;
     overflow: scroll;
-    min-width: 650px;
+    min-width: 552px;
 }
 
     .db-row{

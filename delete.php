@@ -17,7 +17,7 @@ $db_name = 'yad';
 
 <main>
 
-    <div class="text-welcome">
+    <div class="text-delete">
         <?php
         if (!isset($_GET['id']))
         {
@@ -50,7 +50,7 @@ $db_name = 'yad';
         if ($result->affected_rows > 0)
         {
             echo "Het geselecteerde item is met succes verwijderd.";
-            ?> <button><a href="input.php">Terug</a></button> <?php
+            ?> <button class="button-back"><a href="input.php">Terug</a></button> <?php
         }
         else
         {
@@ -60,6 +60,8 @@ $db_name = 'yad';
         $con->close();
         ?>
     </div>
+
 </main>
+
 </body>
 </html>

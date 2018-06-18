@@ -6,7 +6,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <!--<meta http-equiv="refresh" content="15">-->
     <title>Screen</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -25,6 +24,8 @@
                 <div class="db-name">
                     <?php
 
+                        $currentDate = date("d-m-Y");
+
                         //Set SQL statement
                         $sql ="SELECT *, TIME_FORMAT(tijdstip_van, '%H:%i'), TIME_FORMAT(tijdstip_tot, '%H:%i') FROM `scherm` WHERE ADDTIME(CURRENT_TIME(), 001500) >= `tijdstip_van` and ADDTIME(CURRENT_TIME(), 001000) <= `tijdstip_tot` and `datum` = CURRENT_DATE() limit 1;";
 
@@ -39,7 +40,6 @@
                         } else {
                             header("Location: http://localhost:8888/welcome-screen/random.php");
                         }
-
 
                         //If $package contains data, show 'naam'
                         if (!empty($package)) {

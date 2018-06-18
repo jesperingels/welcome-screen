@@ -38,7 +38,7 @@
                         datum:
                     </div>
                     <div>
-                        <input type="text" name="datum" placeholder="YYYY/MM/DD" required/>
+                        <input type="date" name="datum" placeholder="YYYY/MM/DD" required/>
                     </div>
                 </div> <!-- input-wrapper end -->
 
