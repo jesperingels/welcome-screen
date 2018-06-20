@@ -1,0 +1,59 @@
+
+.input-wrapper{
+    margin-bottom: 10px;
+}
+
+.live-db{
+    display: flex;
+    justify-content: center;
+    color:black;
+    height:auto;
+    width: auto;
+    background-color: transparent;
+    overflow: scroll;
+    min-width: 581px;
+}
+
+.db-container{
+    display: table;
+    width: auto;
+    background-color: #eee;
+    border: 1px solid #666666;
+    border-spacing: 5px;
+    overflow: scroll;
+    min-width: 552px;
+}
+
+.db-row{
+    display: table-row;
+    width: auto;
+    clear: both;
+}
+
+.db-header{
+    float: left;
+    display: table-column;
+    width: 90px;
+    background-color: #003850;
+    color: white;
+}
+
+.db-col{
+    float: left;
+    display: table-column;
+    width: 90px;
+    background-color: #ccc;
+    border-left: 1px solid black;
+}
+
+@media all and (min-width: 1020px){
+
+    .db-header{
+        width: 125px;
+    }
+
+    .db-col{
+        width: 125px;
+    }
+
+}
