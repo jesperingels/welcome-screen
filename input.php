@@ -98,7 +98,7 @@
                                 echo $row['bedrijf'];
                              }
                              else{
-                                echo "{no_input}";
+                                echo "{Leeg}";
                              }
                             ?>
                         </div>

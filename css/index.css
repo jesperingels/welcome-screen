@@ -6,7 +6,7 @@ main{
 }
     .text-wrapper{
         display: inline-block;
-        width: 1500px;
+        width: 1300px;
         position: absolute;
         left:23%;
         top: 22%;
@@ -81,12 +81,12 @@ main{
             padding: 0;
         }
 
-        .from::before{
+        .time-from::before{ /*  content is niet nodig */
             content:"van";
             padding:0 4px;
         }
 
-        .until::before {
+        .time-until::before { /* content  is niet nodig */
             content: "tot";
             padding: 0 0 0 35px;
         }

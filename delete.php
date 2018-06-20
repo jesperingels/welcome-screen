@@ -10,7 +10,9 @@ $db_name = 'yad';
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/globals.css">
     <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/input.css">
     <title>Delete Item</title>
 </head>
 <body>

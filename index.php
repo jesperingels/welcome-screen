@@ -6,9 +6,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="15">
+    <meta http-equiv="refresh" content="300">
     <title>Scherm</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/globals.css">
 </head> <!-- head end -->
@@ -73,8 +73,6 @@
 
         </div> <!-- text-wrapper end-->
 
-
-
         <aside></aside>
 
         <img class="logo" src="images/youaredigital.svg"/>
@@ -88,11 +86,11 @@
             <div class="location"> Main Office <?php /*echo $package['locatie'] */?></div>
             <div class="time">
                 <div><img class="calender-image" src="images/calender-01.png"/></div>
-                <div class="from"> <?php echo $package["TIME_FORMAT(tijdstip_van, '%H:%i')"]?> </div>
-                <div class="until"> <?php echo $package["TIME_FORMAT(tijdstip_tot, '%H:%i')"]?> </div>
+                <div class="time-from"> <?php echo $package["TIME_FORMAT(tijdstip_van, '%H:%i')"]?> </div>
+                <div class="time-until"> <?php echo $package["TIME_FORMAT(tijdstip_tot, '%H:%i')"]?> </div>
             </div>
 
-        </div> <!-- text-wrapper end -->
+        </div> <!-- text-location-wrapper end -->
         <img class="arrow-right" src="images/bolletjes.svg">
 
     </main> <!-- main end -->
