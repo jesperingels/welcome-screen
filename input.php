@@ -17,7 +17,7 @@
             <div class="input-container d-flex flex-column">
                 <div class="input-wrapper">
                     <div>
-                        naam:
+                        naam:*
                     </div>
                     <div>
                         <input type="text" name="naam" required/>
@@ -29,13 +29,13 @@
                         Bedrijf:
                     </div>
                     <div>
-                        <input type="text" name="bedrijf" required/>
+                        <input type="text" name="bedrijf" />
                     </div>
                 </div> <!-- input-wrapper end -->
 
                 <div class="input-wrapper">
                     <div>
-                        datum:
+                        datum:*
                     </div>
                     <div>
                         <input type="date" name="datum" placeholder="YYYY/MM/DD" required/>
@@ -44,7 +44,7 @@
 
                 <div class="input-wrapper">
                     <div>
-                        Tijdstip van:
+                        Tijdstip van:*
                     </div>
                     <div>
                         <input type="text" name="tijdstip_van" placeholder="00:00" required/>
@@ -53,7 +53,7 @@
 
                 <div class="input-wrapper">
                     <div>
-                        Tijdstip tot:
+                        Tijdstip tot:*
                     </div>
                     <div>
                         <input type="text" name="tijdstip_tot" placeholder="00:00" required/>
@@ -90,7 +90,16 @@
                 ?>
                     <div class="db-row d-flex db-data">
                         <div class="db-col"><?php echo $row['naam']; ?></div>
-                        <div class="db-col"><?php echo $row['bedrijf']; ?> </div>
+                        <div class="db-col">
+                            <?php
+                             if(!empty($row['bedrijf'])){
+                                echo $row['bedrijf'];
+                             }
+                             else{
+                                echo "{no_input}";
+                             }
+                            ?>
+                        </div>
                         <div class="db-col"><?php echo $row['datum']; ?></div>
                         <div class="db-col"><?php echo $row['tijdstip_van']; ?></div>
                         <div class="db-col"><?php echo $row['tijdstip_tot']; ?></div>

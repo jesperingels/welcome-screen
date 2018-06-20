@@ -38,7 +38,6 @@ main{
             padding-right: 27px;
             font-size: 25px;
             padding-top: 21px;
-            margin-bottom: -15px;
         }
 
         .text-welcome::after{
@@ -49,6 +48,7 @@ main{
     .db-name{
         font-size: 80px;
         font-family: Futura-Bold, serif;
+        line-height: 75px;
     }
 
     .text-company-wrapper{
@@ -57,7 +57,6 @@ main{
         .text-company{
             padding: 21px 27px 0 0;
             font-size: 25px;
-            margin-bottom: -15px;
         }
 
     aside{

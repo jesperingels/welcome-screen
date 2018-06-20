@@ -27,7 +27,7 @@
                         $currentDate = date("d-m-Y");
 
                         //Set SQL statement
-                        $sql ="SELECT *, TIME_FORMAT(tijdstip_van, '%H:%i'), TIME_FORMAT(tijdstip_tot, '%H:%i') FROM `scherm` WHERE ADDTIME(CURRENT_TIME(), 001500) >= `tijdstip_van` and ADDTIME(CURRENT_TIME(), 001000) <= `tijdstip_tot` and `datum` = CURRENT_DATE() limit 1;";
+                        $sql ="SELECT *, TIME_FORMAT(tijdstip_van, '%H:%i'), TIME_FORMAT(tijdstip_tot, '%H:%i') FROM `scherm` WHERE ADDTIME(CURRENT_TIME(), 001500) >= `tijdstip_van` and ADDTIME(CURRENT_TIME(), 001500) <= `tijdstip_tot` and `datum` = CURRENT_DATE() limit 1;";
 
                         //Send the sql statement to the database
                         $result = mysqli_query($conn, $sql);
@@ -55,7 +55,15 @@
 
             <div class="text-company-wrapper">
 
-                <div class="text-company">van</div>
+                <div class="text-company">
+                    <?php
+                        if(!empty($package['bedrijf'])){
+                            echo "van";
+                        } else{
+                            echo "";
+                        }
+                    ?>
+                </div>
                 <div class="db-name">
                     <?php echo $package['bedrijf'] ?>
                 </div>
