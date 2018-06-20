@@ -8,8 +8,6 @@ catch(PDOException $e) {
 echo "Connection failed:" . $e->getMessage();
 }*/
 
-
-
 $dbServername = "localhost";
 $dbUsername = "root";
 $dbPassword = "root";
